@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="build/output.css" />
+  </head>
+  <body class="flex justify-center items-center bg-blue-600 h-screen">
+    <div class="space-y-8 w-2/6" x-data="{radio:1}">
+      <div
+        @click="radio=1"
+        :class="radio===1 ? 'ring-blue-400 bg-gray-800 text-white' : ''"
+        class="px-8 py-4 bg-white ring-4 rounded-lg cursor-pointer flex justify-between items-center select-none"
+      >
+        <div class="flex flex-col justify-start gap-1">
+          <span class="font-semibold text-lg">Startup</span
+          ><span
+            class="text-gray-500"
+            :class="radio===1  ? ' text-gray-300' : ''"
+            >12GB/6 CPUs · 160 GB SSD disk
+          </span>
+        </div>
+        <svg
+          x-show="radio===1"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-8 w-8 fill-slate-500 bg-slate-200 rounded-2xl"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </div>
+      <div
+        @click="radio=2"
+        :class="radio===2  ? 'ring-blue-400 bg-gray-800 text-white' : ''"
+        class="px-8 py-4 bg-white ring-4 rounded-lg cursor-pointer flex justify-between items-center select-none"
+      >
+        <div class="flex flex-col justify-start gap-1">
+          <span class="font-semibold text-lg">Startup</span
+          ><span
+            :class="radio===2  ? ' text-gray-300' : ''"
+            class="text-gray-500"
+            >16GB/8 CPUs · 512 GB SSD disk</span
+          >
+        </div>
+        <svg
+          x-show="radio===2"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-8 w-8 fill-slate-500 bg-slate-200 rounded-2xl"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </div>
+      <div
+        @click="radio=3"
+        :class="radio===3 ? 'ring-blue-400 bg-gray-800 text-white' : ''"
+        class="px-8 py-4 bg-white ring-4 rounded-lg cursor-pointer flex justify-between items-center select-none"
+      >
+        <div class="flex flex-col justify-start gap-1">
+          <span class="font-semibold text-lg">Startup</span
+          ><span
+            :class="radio===3  ? ' text-gray-300' : ''"
+            class="text-gray-500"
+            >32GB/12 CPUs · 1024 GB SSD disk</span
+          >
+        </div>
+        <svg
+          x-show="radio===3"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-8 w-8 fill-slate-500 bg-slate-200 rounded-2xl"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <script src="//unpkg.com/alpinejs" defer></script>
+  </body>
+</html>
